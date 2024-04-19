@@ -87,7 +87,7 @@ export default function App() {
               Services.slice(0, 6).map(item => (
                 <Link href={`/service/${item.id}`} className="group relative rounded-2xl w-full h-full" key={item.id}>
                   <Image src={item.image} alt={item.label} className="w-full h-full object-cover rounded-2xl group-hover:opacity-50 bg-black transition-opacity duration-300" />
-                  <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-300 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 rounded-2xl transition-opacity duration-300 flex items-center justify-center text-center">
                     <span className="text-primary-color text-lg group-hover:opacity-100">{item.label}</span>
                   </div>
                 </Link>
