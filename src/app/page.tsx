@@ -13,6 +13,7 @@ import { Services } from "@/constants/services";
 import ContactUs from "@/components/contactUs/ContactUs";
 import truck from "@public/assets/images/3d-truck-removebg-preview.png";
 import { TextGenerateEffectDemo } from "@/components/typingSmooth/TextGenerateEffect";
+import { ABOUT } from "@/utils/Routes";
 
 export default function App() {
   return (
@@ -55,7 +56,7 @@ export default function App() {
             <p className="text-3xl mb-5 font-semibold">About Galcop</p>
             <p className="text-lg">Since 2000, we have been offering our services to the non-commercial, commercial and industrial sectors in Cambodia. We are a garment handling specialist offering many services ideally suited to the garment industry and other businesses in Cambodia and internationally.</p>
             <div className="mt-7">
-              <ButtonGreen showIcon={true} content="Learn more" url="#" size="md" key={'about-gal'} />
+              <ButtonGreen showIcon={true} content="Learn more" url={ABOUT} size="md" key={'about-gal'} />
             </div>
           </div>
         </div>
@@ -68,7 +69,7 @@ export default function App() {
             <ButtonGreen showIcon={true} content="Learn more" url="https://youtu.be/NltXHT06xGk?si=kHzsFAymP63ULVd7" size="md" />
           </div>
         </div>
-        <iframe className="rounded-xl w-full" height={'380px'} autoFocus src="https://www.youtube.com/embed/NltXHT06xGk?si=zhtdOYWOz9S_N54w&amp;controls=0" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+        <iframe className="w-full h-[315px] rounded-xl" src="https://www.youtube.com/embed/NltXHT06xGk?si=QtDh5cw06LyxyKPL" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
       </section>
       <section className="py-10">
         <h2 className="font-bold text-text-color">Discover Our Comprehensive Range of Services</h2>

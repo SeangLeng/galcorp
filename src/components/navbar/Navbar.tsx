@@ -8,9 +8,12 @@ import { Services } from "@/constants/services";
 import logo from '@public/assets/images/logo.png';
 import Image from "next/image";
 import { FaBars } from "react-icons/fa";
+import { usePathname } from "next/navigation";
+import { ABOUT, CONTACTUS, HOME, SERVICES } from "@/utils/Routes";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
+  const pathname = usePathname();
 
   return (
     <Navbar
@@ -33,12 +36,12 @@ export default function App() {
           </Link>
         </NavbarBrand>
         <NavbarItem>
-          <Link color="foreground" href="#" className="text-lg font-medium">
+          <Link color={pathname === HOME ? 'primary' : 'foreground'} href={HOME} className="text-lg font-medium">
             Home
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#" color="foreground" className="text-lg font-medium">
+          <Link href={ABOUT} color={pathname === ABOUT ? 'primary' : 'foreground'} className="text-lg font-medium">
             About
           </Link>
         </NavbarItem>
@@ -47,7 +50,7 @@ export default function App() {
             <DropdownTrigger>
               <Button
                 disableRipple
-                className="p-0 bg-transparent data-[hover=true]:bg-transparent text-lg font-medium"
+                className={`p-0 bg-transparent data-[hover=true]:bg-transparent text-lg font-medium ${pathname === SERVICES ? 'text-primary' : 'text-foreground'}`}
                 radius="sm"
                 variant="light"
                 startContent={<IoIosArrowDown />}
@@ -79,35 +82,35 @@ export default function App() {
             }
           </DropdownMenu>
         </Dropdown>
-        <NavbarItem>
-          <Link href="#" color="foreground" className="text-lg font-medium">
+        <NavbarItem >
+          <Link href="#" color={pathname === CONTACTUS ? 'primary' : 'foreground'} className="text-lg font-medium">
             Contact
           </Link>
         </NavbarItem>
       </NavbarContent>
-      
+
       <NavbarContent className="sm:hidden" justify="center">
         <NavbarMenuToggle icon={<FaBars />} aria-label={isMenuOpen ? "Close menu" : "Open menu"} />
       </NavbarContent>
 
       <NavbarMenu className="flex flex-col gap-5">
         <NavbarItem className="mt-10">
-          <Link color="foreground" href="#" className="text-lg font-medium">
+          <Link color={pathname === HOME ? 'primary' : 'foreground'} href="#" className="text-lg font-medium">
             Home
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#" color="foreground" className="text-lg font-medium">
+          <Link href={ABOUT} color={pathname === ABOUT ? 'primary' : 'foreground'} className="text-lg font-medium">
             About
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#" color="foreground" className="text-lg font-medium">
+          <Link href="#" color={pathname === SERVICES ? 'primary' : 'foreground'} className="text-lg font-medium">
             Services
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#" color="foreground" className="text-lg font-medium">
+          <Link href="#" color={pathname === CONTACTUS ? 'primary' : 'foreground'} className="text-lg font-medium">
             Contact
           </Link>
         </NavbarItem>
