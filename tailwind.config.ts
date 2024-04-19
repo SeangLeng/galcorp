@@ -19,17 +19,19 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        "primary-color": "#FFFFFF",
+        "text-color": "#272727",
+        "blue-color": "#2E88CA",
+        "green-color": "#598C6E",
+        "red-color": "#913332",
+        "described-color": "#878787",
+      },
     },
     container: {
       center: true,
     },
-    colors: {
-      "primary-color": "white",
-      "text-color": "#272727",
-      "blue-color": "#2E88CA"
-    }
   },
-  darkMode: "class",
   plugins: [addVariablesForColors, nextui()],
 };
 export default config;

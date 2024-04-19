@@ -12,19 +12,6 @@ import { FaBars } from "react-icons/fa";
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
-  ];
-
   return (
     <Navbar
       className="p-3"
@@ -83,9 +70,9 @@ export default function App() {
             {
               Services.map((item) => (
                 <DropdownItem
-                  href={`/services/${item.id}`}
+                  href={`#`}
                   key={item.label}
-                  className="grid justify-center items-center"
+                  className="grid justify-center items-center p-5 hover:ring-1 ring-black hover:bg-transparent"
                 >
                   <div className="grid justify-center items-center mb-1">
                     <item.icon size={30} />
@@ -130,7 +117,7 @@ export default function App() {
           </NavbarItem>
           <DropdownMenu
             aria-label="ACME features"
-            className="w-[340px] p-4"
+            className="w-[440px] p-4"
             classNames={{
               list: 'grid grid-cols-3 gap-5'
             }}
@@ -138,9 +125,9 @@ export default function App() {
             {
               Services.map((item) => (
                 <DropdownItem
-                  href={`/services/${item.id}`}
+                  href={`#`}
                   key={item.label}
-                  className="grid justify-center items-center"
+                  className="grid justify-center items-center p-5 hover:ring-1 ring-black hover:bg-transparent"
                 >
                   <div className="grid justify-center items-center mb-1">
                     <item.icon size={30} />
