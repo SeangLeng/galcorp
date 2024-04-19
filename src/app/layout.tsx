@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+
 import "./globals.css";
 import { Providers } from "./providers";
+import NavbarComponent from "@/components/navbar/Navbar";
+import Footer from "@/components/footer/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Galcorp-logistic",
@@ -17,9 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body>
         <Providers>
-          {children}
+          <NavbarComponent />
+          <div className={'container mx-auto px-4 py-10'}>
+            {children}
+          </div>
+          <Footer />
         </Providers>
       </body>
     </html >
