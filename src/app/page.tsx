@@ -12,6 +12,7 @@ import ButtonServices from "@/components/button/ButtonServices";
 import { Services } from "@/constants/services";
 import ContactUs from "@/components/contactUs/ContactUs";
 import truck from "@public/assets/images/3d-truck-removebg-preview.png";
+import { TextGenerateEffectDemo } from "@/components/typingSmooth/TextGenerateEffect";
 
 export default function App() {
   return (
@@ -19,9 +20,9 @@ export default function App() {
       <h1 className="font-bold text-text-color lg:w-4/5 md:w-5/6 w-full">Welcome to <span className="text-red-color">Gal</span> <span className="text-green-color">Logistic</span> International Freight Forwarder </h1>
       <section className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5">
         <div className="mt-5">
-          <p id="description" className="text-lg text-text-color">
-            Gal is the ideal international freight forwarder to suit your freight and logistics needs. We have local knowledge and plus international market experiences since year 2000, now more than a decade of commitment to serve our clients.
-          </p>
+          <div id="description" className="text-lg text-text-color">
+            <TextGenerateEffectDemo text="Gal is the ideal international freight forwarder to suit your freight and logistics needs. We have local knowledge and plus international market experiences since year 2000, now more than a decade of commitment to serve our clients." />
+          </div>
           <div className="flex justify-start items-center gap-8 mt-10">
             <div className="hover:ring-2 rounded-2xl flex cursor-pointer justify-center items-center gap-5 p-3 w-fit transition-all shadow-md">
               <GoContainer size={40} color="#598C6E" />
