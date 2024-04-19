@@ -23,8 +23,8 @@ export default function App() {
           <div id="description" className="text-lg text-text-color">
             <TextGenerateEffectDemo text="Gal is the ideal international freight forwarder to suit your freight and logistics needs. We have local knowledge and plus international market experiences since year 2000, now more than a decade of commitment to serve our clients." />
           </div>
-          <div className="flex justify-start items-center gap-8 mt-10">
-            <div className="hover:ring-2 rounded-2xl flex cursor-pointer justify-center items-center gap-5 p-3 w-fit transition-all shadow-md">
+          <div className="lg:w-3/4 md:w-full w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 justify-start items-center gap-8 mt-10">
+            <div className="hover:ring-2 rounded-2xl flex cursor-pointer justify-center items-center gap-5 p-3 transition-all shadow-md">
               <GoContainer size={40} color="#598C6E" />
               <div>
                 <p className="text-4xl font-bold text-green-color">
@@ -33,7 +33,7 @@ export default function App() {
                 <p className="font-medium">Shipment per year</p>
               </div>
             </div>
-            <div className="hover:ring-2 hover:ring-blue-color rounded-2xl cursor-pointer flex justify-center items-center gap-5 p-3 w-fit transition-all shadow-md">
+            <div className="hover:ring-2 hover:ring-blue-color rounded-2xl cursor-pointer flex justify-center items-center gap-5 p-3 transition-all shadow-md">
               <FaUserFriends size={40} color="#2E88CA" />
               <div>
                 <p className="text-4xl font-bold text-blue-color">
