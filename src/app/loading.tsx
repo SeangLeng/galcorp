@@ -3,8 +3,8 @@ import React from 'react'
 
 export default function Loading() {
   return (
-    <div className='flex justify-center items-center h-lvh'>
-      <Spinner size='lg' />
+    <div className='flex justify-center items-center'>
+      <Spinner size='md' label='loading' />
     </div>
   )
 }
