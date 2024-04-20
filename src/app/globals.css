@@ -33,3 +33,6 @@ nav header {
   max-width: none !important;
 }
 
+.text-shadow {
+  text-shadow: 0px 0px 5px #729cef;
+}

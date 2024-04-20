@@ -97,7 +97,7 @@ export default function App() {
           </div>
         </div>
       </section>
-      <ContactUs image={truck} imageClassname="rotate-12 scale-x-[-1] hidden md:block" />
+      <ContactUs image={truck} imageClassname="rotate-12 scale-x-[-1] hidden md:block m-auto" />
     </main>
   );
 }

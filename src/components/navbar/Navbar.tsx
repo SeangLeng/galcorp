@@ -9,7 +9,7 @@ import logo from '@public/assets/images/logo.png';
 import Image from "next/image";
 import { FaBars } from "react-icons/fa";
 import { usePathname } from "next/navigation";
-import { ABOUT, CONTACTUS, HOME, SERVICES } from "@/utils/Routes";
+import { ABOUT, CONTACTUS, HOME, QRCODE, SERVICES } from "@/utils/Routes";
 
 export default function App() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -83,7 +83,11 @@ export default function App() {
           </DropdownMenu>
         </Dropdown>
         <NavbarItem >
-          <Link href="#" color={pathname === CONTACTUS ? 'primary' : 'foreground'} className="text-lg font-medium">
+          <Link
+            href={CONTACTUS}
+            color={(pathname === CONTACTUS || pathname === QRCODE) ? 'primary' : 'foreground'}
+            className="text-lg font-medium"
+          >
             Contact
           </Link>
         </NavbarItem>
@@ -110,7 +114,7 @@ export default function App() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#" color={pathname === CONTACTUS ? 'primary' : 'foreground'} className="text-lg font-medium">
+          <Link href={CONTACTUS} color={(pathname === CONTACTUS || pathname === QRCODE) ? 'primary' : 'foreground'} className="text-lg font-medium">
             Contact
           </Link>
         </NavbarItem>

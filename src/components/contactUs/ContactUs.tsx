@@ -1,5 +1,6 @@
 'use client';
 
+import { QRCODE } from '@/utils/Routes';
 import { Button, Input, Textarea } from '@nextui-org/react'
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import Image from 'next/image';
@@ -7,10 +8,10 @@ import Link from 'next/link';
 import React from 'react'
 import { IoMdSend } from 'react-icons/io';
 
-export default function ContactUs({ image, imageClassname }: { imageClassname: string | undefined, image: string | StaticImport }) {
+export default function ContactUs({ image, imageClassname }: { imageClassname?: string | undefined, image: string | StaticImport }) {
   const inputStyle = 'rounded-full bg-white shadow-md px-5 focus:border';
   return (
-    <section className='py-20 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1'>
+    <section className='py-20 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-10'>
       <Image src={image} alt='image-contactus' className={imageClassname} />
       <div id='form' className='flex flex-col gap-4'>
         <p className='text-4xl font-bold text-green-color'>Contact us</p>
@@ -27,7 +28,7 @@ export default function ContactUs({ image, imageClassname }: { imageClassname: s
         <Textarea size='lg' variant='flat' placeholder='Message ...' classNames={{
           inputWrapper: 'rounded-xl bg-gray-200 px-5 shadow-md'
         }} />
-        <Link href={'/qrcode'} target='_blank' className='hover:underline underline-offset-4'>Or <span className='text-blue-color font-semibold'>QRCODE</span></Link>
+        <Link href={QRCODE} target='_blank' className='hover:underline underline-offset-4'>Or <span className='text-blue-color font-semibold'>QRCODE</span></Link>
         <Button type='submit' className='rounded-full text-lg text-white bg-green-color flex justify-center items-center gap-5' size='lg'>Send Message <IoMdSend /> </Button>
       </div>
     </section>
