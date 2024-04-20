@@ -22,7 +22,7 @@ export default function AboutUs() {
     <section id='about-us'>
       <div id='intro'>
         <Image src={truck} alt='truck' className='absolute inset-0 z-0 top-0 right-0 h-[700px] object-cover brightness-50' />
-        <div className='sticky text-white z-10 mt-10 flex flex-col justify-center items-center mb-52'>
+        <div className='sticky text-white z-10 mt-10 flex flex-col justify-center items-center mb-56'>
           <h1 className='text-white font-bold'>About us</h1>
           <div className='md:w-2/3 text-center'>
             <TextGenerateEffectDemo classnameProps='text-white md:text-lg text-sm' text='Since 2000, we have provided services to various sectors in Cambodia, specializing in garment handling. Our expertise and proactive approach have established us as industry leaders in performance and customer satisfaction. We offer a wide range of services tailored to meet your needs ensuring success in achieving your goals We handle all aspects of transportation with integrity.' />

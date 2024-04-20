@@ -99,7 +99,7 @@ export default function App() {
 
       <NavbarMenu className="flex flex-col gap-5">
         <NavbarItem className="mt-10">
-          <Link color={pathname === HOME ? 'primary' : 'foreground'} href="#" className="text-lg font-medium">
+          <Link color={pathname === HOME ? 'primary' : 'foreground'} href={HOME} className="text-lg font-medium">
             Home
           </Link>
         </NavbarItem>
