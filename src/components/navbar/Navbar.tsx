@@ -109,7 +109,7 @@ export default function App() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#" color={(pathname === SERVICES || pathname.startsWith(SERVICES)) ? 'primary' : 'foreground'} className="text-lg font-medium">
+          <Link href={SERVICES} color={(pathname === SERVICES || pathname.startsWith(SERVICES)) ? 'primary' : 'foreground'} className="text-lg font-medium">
             Services
           </Link>
         </NavbarItem>
