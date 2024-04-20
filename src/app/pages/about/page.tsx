@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image'
 import React from 'react'
 import { Button } from '@nextui-org/react';
@@ -11,8 +13,11 @@ import presidentCard from '@public/assets/images/boss_card.jpg';
 import appri_1 from '@public/assets/images/77271-appreciation3.jpg';
 import appri_2 from '@public/assets/images/36155-appreciation2.jpg';
 import appri_3 from '@public/assets/images/14363-appreciation1.jpg';
+import { useRouter } from 'next/navigation';
+import { SERVICES } from '@/utils/Routes';
 
 export default function AboutUs() {
+  const router = useRouter();
   return (
     <section id='about-us'>
       <div id='intro'>
@@ -22,7 +27,7 @@ export default function AboutUs() {
           <div className='md:w-2/3 text-center'>
             <TextGenerateEffectDemo classnameProps='text-white md:text-lg text-sm' text='Since 2000, we have provided services to various sectors in Cambodia, specializing in garment handling. Our expertise and proactive approach have established us as industry leaders in performance and customer satisfaction. We offer a wide range of services tailored to meet your needs ensuring success in achieving your goals We handle all aspects of transportation with integrity.' />
           </div>
-          <Button size='lg' className='backdrop-blur-sm bg-white/20 hover:ring-2 ring-white transition-all text-white font-semibold text-lg rounded-full mt-10'>Our services <MdElectricalServices /></Button>
+          <Button onClick={() => router.push(SERVICES)} size='lg' className='backdrop-blur-sm bg-white/20 hover:ring-2 ring-white transition-all text-white font-semibold text-lg rounded-full mt-10'>Our services <MdElectricalServices /></Button>
         </div>
       </div>
       <div id='presedent-card'>

@@ -50,7 +50,7 @@ export default function App() {
             <DropdownTrigger>
               <Button
                 disableRipple
-                className={`p-0 bg-transparent data-[hover=true]:bg-transparent text-lg font-medium ${pathname === SERVICES ? 'text-primary' : 'text-foreground'}`}
+                className={`p-0 bg-transparent data-[hover=true]:bg-transparent text-lg font-medium ${(pathname === SERVICES || pathname.startsWith(SERVICES)) ? 'text-primary' : 'text-foreground'}`}
                 radius="sm"
                 variant="light"
                 startContent={<IoIosArrowDown />}
@@ -69,7 +69,7 @@ export default function App() {
             {
               Services.map((item) => (
                 <DropdownItem
-                  href={`#`}
+                  href={`${SERVICES}/${item.id}`}
                   key={item.label}
                   className="grid justify-center items-center p-5 hover:ring-1 ring-black hover:bg-transparent"
                 >
@@ -109,7 +109,7 @@ export default function App() {
           </Link>
         </NavbarItem>
         <NavbarItem>
-          <Link href="#" color={pathname === SERVICES ? 'primary' : 'foreground'} className="text-lg font-medium">
+          <Link href="#" color={(pathname === SERVICES || pathname.startsWith(SERVICES)) ? 'primary' : 'foreground'} className="text-lg font-medium">
             Services
           </Link>
         </NavbarItem>

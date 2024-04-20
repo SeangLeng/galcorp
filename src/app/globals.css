@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Kantumruy+Pro:ital,wght@0,100..700;1,100..700&display=swap');
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -8,16 +9,23 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+* {
+  font-family: "Kantumruy Pro", sans-serif;
+}
+
 @layer base {
   h1 {
-    @apply text-5xl mb-2;
+    @apply md:text-5xl text-3xl mb-2;
   }
+
   h2 {
     @apply text-3xl mb-2;
   }
+
   h3 {
     @apply text-xl mb-2;
   }
+
   h4 {
     @apply text-lg;
   }

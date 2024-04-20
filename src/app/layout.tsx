@@ -4,6 +4,8 @@ import "./globals.css";
 import { Providers } from "./providers";
 import NavbarComponent from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 
 export const metadata: Metadata = {
@@ -22,7 +24,9 @@ export default function RootLayout({
         <Providers>
           <NavbarComponent />
           <div className={'container mx-auto px-4 py-10'}>
-            {children}
+            <Suspense fallback={<Loading />}>
+              {children}
+            </Suspense>
           </div>
           <Footer />
         </Providers>
