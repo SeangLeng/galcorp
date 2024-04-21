@@ -14,6 +14,7 @@ import ContactUs from "@/components/contactUs/ContactUs";
 import truck from "@public/assets/images/3d-truck-removebg-preview.png";
 import { TextGenerateEffectDemo } from "@/components/typingSmooth/TextGenerateEffect";
 import { ABOUT, COMPANYPROFILE, SERVICES } from "@/utils/Routes";
+import CountUpNumber from "@/components/countUp/CountUp";
 
 export default function App() {
   return (
@@ -29,7 +30,7 @@ export default function App() {
               <GoContainer size={40} color="#598C6E" />
               <div>
                 <p className="text-4xl font-bold text-green-color">
-                  5000+
+                  <CountUpNumber number={5000} />+
                 </p>
                 <p className="font-medium">Shipment per year</p>
               </div>
@@ -38,7 +39,7 @@ export default function App() {
               <FaUserFriends size={40} color="#2E88CA" />
               <div>
                 <p className="text-4xl font-bold text-blue-color">
-                  1000+
+                  <CountUpNumber number={1000} />+
                 </p>
                 <p className="font-medium">Costumers</p>
               </div>
