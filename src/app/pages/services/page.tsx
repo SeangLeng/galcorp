@@ -16,7 +16,7 @@ export default function AllServices() {
               <div className='flex flex-col gap-5 mt-5'>
                 <p className='font-semibold md:text-3xl text-xl text-text-color'>{service.label}</p>
                 <p className='text-text-color md:text-lg text-base'>{service.description}</p>
-                <ButtonGreen classname='w-fit' size='md' showIcon={true} content='Learn more' url={`${SERVICES}/${service.id}`} />
+                <ButtonGreen classname="md:w-fit w-full" size='md' showIcon={true} content='Learn more' url={`${SERVICES}/${service.id}`} />
               </div>
             </div>
           ))

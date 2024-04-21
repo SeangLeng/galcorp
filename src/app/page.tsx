@@ -57,7 +57,7 @@ export default function App() {
             <p className="text-3xl mb-5 font-semibold">About Galcop</p>
             <p className="text-lg">Since 2000, we have been offering our services to the non-commercial, commercial and industrial sectors in Cambodia. We are a garment handling specialist offering many services ideally suited to the garment industry and other businesses in Cambodia and internationally.</p>
             <div className="mt-7">
-              <ButtonGreen showIcon={true} content="Learn more" url={ABOUT} size="md" key={'about-gal'} />
+              <ButtonGreen classname="md:w-fit w-full" showIcon={true} content="Learn more" url={ABOUT} size="md" key={'about-gal'} />
             </div>
           </div>
         </div>
@@ -67,7 +67,7 @@ export default function App() {
           <h2 className="font-bold text-text-color">Appreciation</h2>
           <p className="text-text-color mt-5 text-lg">With our sincere services and effort, our partners and clients has proof us of their appreciation and we wish to say Thanks to our partners in shipping industry and special Thanks to all our respected clients and partners worldwide.</p>
           <div className="mt-7">
-            <ButtonGreen showIcon={true} content="Learn more" url="https://youtu.be/NltXHT06xGk?si=kHzsFAymP63ULVd7" size="md" />
+            <ButtonGreen classname="md:w-fit w-full" showIcon={true} content="Learn more" url="https://youtu.be/NltXHT06xGk?si=kHzsFAymP63ULVd7" size="md" />
           </div>
         </div>
         <iframe className="w-full h-[315px] rounded-xl" src="https://www.youtube.com/embed/NltXHT06xGk?si=QtDh5cw06LyxyKPL" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
