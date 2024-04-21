@@ -76,7 +76,7 @@ export default function App() {
         <h2 className="font-bold text-text-color">Discover Our Comprehensive Range of Services</h2>
         <p className="text-described-color text-lg">Gain insights from our experienced consultants who can guide you through strategic planning, market analysis, and business development</p>
         <div className="grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 gap-10 mt-10">
-          <div className="flex flex-col gap-3">
+          <div className="flex flex-col gap-3 md:order-1 order-2">
             {
               Services.slice(0, 5).map(service => (
                 <ButtonServices label={service.label} url={`${SERVICES}/${service.id}`} key={service.id} />
@@ -84,7 +84,7 @@ export default function App() {
             }
             <ButtonGreen showIcon={false} content="More service" url={SERVICES} size="md" />
           </div>
-          <div className="md:col-start-2 md:col-span-2 grid lg:grid-cols-3 md:grid-cols-3 grid-cols-2 gap-4">
+          <div className="md:col-start-2 md:col-span-2 grid lg:grid-cols-3 md:grid-cols-3 grid-cols-2 gap-4 md:order-2 order-1">
             {
               Services.slice(0, 6).map(item => (
                 <Link href={`${SERVICES}/${item.id}`} className="group relative rounded-2xl w-full h-full" key={item.id}>
@@ -99,6 +99,6 @@ export default function App() {
         </div>
       </section>
       <ContactUs image={truck} imageClassname="rotate-12 scale-x-[-1] hidden md:block m-auto" />
-    </main>
+    </main >
   );
 }
