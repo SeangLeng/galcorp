@@ -8,13 +8,13 @@ import Link from 'next/link';
 import React, { FormEvent, useRef, useState } from 'react'
 import { IoMdSend } from 'react-icons/io';
 import emailjs from '@emailjs/browser';
-import { message } from 'antd';
+import { message, Modal } from 'antd';
 import { emailjsProps } from '@/constants/emailJs.service';
 
 export default function ContactUs({ image, imageClassname }: { imageClassname?: string | undefined, image: string | StaticImport }) {
   const inputStyle = 'rounded-full bg-white shadow-md px-5 focus:border';
   const form = useRef<HTMLFormElement>(null);
-  const [check, setCheck] = useState<boolean>(false);
+  const [check, setCheck] = useState<boolean>(true);
   const [loading, setLoading] = useState<boolean>(false);
 
   const validateForm = (event: FormEvent<HTMLFormElement>) => {
@@ -28,8 +28,7 @@ export default function ContactUs({ image, imageClassname }: { imageClassname?: 
       message.error("Please fill all the fields to contact to us");
       event.preventDefault();
       setCheck(false);
-    } else {
-      setCheck(true);
+      return;
     }
   };
 
@@ -37,18 +36,23 @@ export default function ContactUs({ image, imageClassname }: { imageClassname?: 
     setLoading(true);
     event.preventDefault();
     validateForm(event);
+
     if (form.current && check) {
       emailjs
         .sendForm(emailjsProps.serviceid, emailjsProps.templateId, form.current, emailjsProps.publickey)
         .then(
           () => {
-            message.success("Your email has send to us successfully");
+            Modal.success({
+              title: 'Email sent successfully',
+              content: 'Thanks for sending your message to us!',
+            })
           },
           (error) => {
-            message.success("Sorry something went wrong with your email");
+            message.error("Sorry something went wrong with your email");
           },
         );
     }
+
     setTimeout(() => {
       setLoading(false);
     }, 1000);
@@ -71,7 +75,7 @@ export default function ContactUs({ image, imageClassname }: { imageClassname?: 
             inputWrapper: inputStyle
           }} />
           <Textarea name='message' size='lg' variant='flat' placeholder='Message ...' classNames={{
-            inputWrapper: 'rounded-xl bg-gray-200 px-5 shadow-md'
+            inputWrapper: 'rounded-xl bg-gray-200 px-5 shadow-md bg-white'
           }} />
           <Link href={QRCODE} target='_blank' className='hover:underline underline-offset-4'>Or <span className='text-blue-color font-semibold'>QRCODE</span></Link>
           <Button spinner={
