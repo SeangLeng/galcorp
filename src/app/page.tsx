@@ -30,7 +30,7 @@ export default function App() {
               <GoContainer size={40} color="#598C6E" />
               <div>
                 <p className="text-4xl font-bold text-green-color">
-                  <CountUpNumber number={5000} />+
+                  <CountUpNumber number={1500} />+
                 </p>
                 <p className="font-medium">Shipment per year</p>
               </div>

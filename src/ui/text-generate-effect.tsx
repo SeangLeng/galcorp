@@ -16,11 +16,11 @@ export const TextGenerateEffect = ({
     animate(
       "span",
       {
-        opacity: 1,
+        opacity: 2,
       },
       {
-        duration: 1,
-        delay: stagger(0.2),
+        duration: 2,
+        delay: stagger(0.05),
       }
     );
   }, [scope.current]);

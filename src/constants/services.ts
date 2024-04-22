@@ -56,7 +56,7 @@ export const Services: ServiceProps[] = [
         <li>Airfreight consolidation</li>
         <li>Free-flow of documentation</li>
     </ul>
-    <p><br>Gal Air-Consol With our wide-ranging portfolio of services under Gal Air-Consol, you now have greater flexibility in areas such as service and tariffs, providing options that will suit all your airfreight consignments perfectly.  Gal Air-Charter Your unique shipment requires our special attention. We offer three different freight choices that are guaranteed to suit your needs. Gal Air-Charter organizes dedicated freighter aircraft flights that are customized to meet your exact requirements.  Gal Charter&rsquo;s specialty is in heavy goods. This service matches the right aircraft for your shipment, thus saving you costs while taking excellent care of your cargo.  </p>
+    <p><br>Gal Air-Consol With our wide-ranging of services under Gal Air-Consol, you now have greater flexibility in areas such as service and tariffs, providing options that will suit all your airfreight consignments perfectly.  Gal Air-Charter Your unique shipment requires our special attention. We offer three different freight choices that are guaranteed to suit your needs. Gal Air-Charter organizes dedicated freighter aircraft flights that are customized to meet your exact requirements.  Gal Charter&rsquo;s specialty is in heavy goods. This service matches the right aircraft for your shipment, thus saving you costs while taking excellent care of your cargo.  </p>
     <br/>
     <p>Gal Express and air priority services caters for shipments that are on a tight timeline. We assure you delivery or collection within 24 hours for the fastest transit time.  </p>
     <br/>

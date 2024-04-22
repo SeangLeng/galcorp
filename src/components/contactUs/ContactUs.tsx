@@ -71,7 +71,7 @@ export default function ContactUs({ image, imageClassname }: { imageClassname?: 
           <Input name='subject' size='lg' variant='flat' placeholder='Subject' type='text' classNames={{
             inputWrapper: inputStyle
           }} />
-          <Input name='email' size='lg' variant='flat' placeholder='Email' type='email' classNames={{
+          <Input name='email' size='lg' variant='flat' placeholder='Your Email' type='email' classNames={{
             inputWrapper: inputStyle
           }} />
           <Textarea name='message' size='lg' variant='flat' placeholder='Message ...' classNames={{

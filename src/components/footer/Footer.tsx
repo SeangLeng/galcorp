@@ -13,7 +13,7 @@ export default function Footer() {
               <p>House# A16E0E1, Group# 4, Tumnorp Village, Sangkat Phnom Penh Thmey, Khan Sen Sok, Phnom Penh Capital, Cambodia</p>
             </div>
             <div>
-              <h3 className='font-medium'>Ms Samnang Pal</h3>
+              <h3 className='font-medium'>Mr. Bush Pal</h3>
               <p>Email: general@gal-corp.com</p>
               <p>operations@gal-corp.com</p>
               <p>Back-up Email: veasnabush@gmail.com</p>
