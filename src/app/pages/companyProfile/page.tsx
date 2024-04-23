@@ -60,20 +60,6 @@ export default function CompanyProfile() {
       <div id='interesting-part'>
         <div className='grid gap-20 justify-center items-center text-center'>
           <p className='text-5xl font-bold text-text-color'>Interesting ?</p>
-          <div>
-            <p className='font-semibold text-xl'>Ms. Palsak Samnang</p>
-            <div className='flex gap-5 justify-center items-center mt-4'>
-              <Link href={'#'}>
-                <Image src={email} alt='email' className='w-[50px]' />
-              </Link>
-              <Link href={'#'}>
-                <Image src={phone} alt='phone' className='w-[50px]' />
-              </Link>
-              <Link href={'#'}>
-                <Image src={web} alt='web' className='w-[50px]' />
-              </Link>
-            </div>
-          </div>
           <ButtonGreen content='Contact to us' size='lg' url={CONTACTUS} showIcon={false} />
         </div>
       </div>
