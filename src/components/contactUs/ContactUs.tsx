@@ -15,52 +15,6 @@ import ButtonGreen from '../button/ButtonGreen';
 import { MdAttachEmail, MdEmail, MdMarkEmailRead } from 'react-icons/md';
 
 export default function ContactUs({ image, imageClassname }: { imageClassname?: string | undefined, image: string | StaticImport }) {
-  const inputStyle = 'rounded-full bg-white shadow-md px-5 focus:border';
-  const form = useRef<HTMLFormElement>(null);
-  const [check, setCheck] = useState<boolean>(true);
-  const [loading, setLoading] = useState<boolean>(false);
-
-  const validateForm = (event: FormEvent<HTMLFormElement>) => {
-    const formData = new FormData(event.currentTarget);
-    const username = formData.get('from_name');
-    const email = formData.get('email');
-    const messages = formData.get('message');
-    const subject = formData.get('subject');
-
-    if (!username || !email || !messages || !subject) {
-      message.error("Please fill all the fields to contact to us");
-      event.preventDefault();
-      setCheck(false);
-      return;
-    }
-  };
-
-  const handleSendEmail = (event: FormEvent<HTMLFormElement>) => {
-    setLoading(true);
-    event.preventDefault();
-    validateForm(event);
-
-    if (form.current && check) {
-      emailjs
-        .sendForm(emailjsProps.serviceid, emailjsProps.templateId, form.current, emailjsProps.publickey)
-        .then(
-          () => {
-            Modal.success({
-              title: 'Email sent successfully',
-              content: 'Thanks for sending your message to us!',
-            })
-          },
-          (error) => {
-            message.error("Sorry something went wrong with your email");
-          },
-        );
-    }
-
-    setTimeout(() => {
-      setLoading(false);
-    }, 1000);
-  };
-
   return (
     <section id='contactus' className='py-16 grid justify-center items-center lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-10'>
       <Image src={image} alt='image-contactus' className={imageClassname} />
