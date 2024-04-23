@@ -26,7 +26,7 @@ export default function ContactUs({ image, imageClassname }: { imageClassname?: 
           <div className='grid gap-2'>
             <p className='flex gap-3 justify-start items-center'><MdAttachEmail size={30} className='text-gray-600' /> <a href="mailto:general@gal-corp.com">general@gal-corp.com</a></p>
             <p className='flex gap-3 justify-start items-center'><MdMarkEmailRead size={30} className='text-gray-600' /> <a href="mailto:operations@gal-corp.com">operations@gal-corp.com</a></p>
-            <p className='flex gap-3 justify-start items-center'><MdEmail size={30} className='text-gray-600' />Back-up Email: <a href="mailto: veasnabush@gmail.com"> veasnabush@gmail.com</a></p>
+            <p className='flex gap-3 justify-start items-center'><MdEmail size={30} className='text-gray-600' /><a href="mailto: veasnabush@gmail.com"> veasnabush@gmail.com (Backup email)</a></p>
           </div>
         </div>
         <ButtonGreen classname='mt-5' content='Email to operations@gal-corp.com' size='md' url='mailto:operations@gal-corp.com' showIcon={false} />
