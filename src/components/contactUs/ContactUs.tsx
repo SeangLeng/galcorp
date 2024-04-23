@@ -10,6 +10,9 @@ import { IoMdSend } from 'react-icons/io';
 import emailjs from '@emailjs/browser';
 import { message, Modal } from 'antd';
 import { emailjsProps } from '@/constants/emailJs.service';
+import { SocailLink } from '@/constants/relatedWeb';
+import ButtonGreen from '../button/ButtonGreen';
+import { MdAttachEmail, MdEmail, MdMarkEmailRead } from 'react-icons/md';
 
 export default function ContactUs({ image, imageClassname }: { imageClassname?: string | undefined, image: string | StaticImport }) {
   const inputStyle = 'rounded-full bg-white shadow-md px-5 focus:border';
@@ -59,48 +62,20 @@ export default function ContactUs({ image, imageClassname }: { imageClassname?: 
   };
 
   return (
-    <section className='py-20 grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-10'>
+    <section id='contactus' className='py-16 grid justify-center items-center lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-10'>
       <Image src={image} alt='image-contactus' className={imageClassname} />
       <div id='form' className='flex flex-col gap-4'>
         <p className='text-4xl font-bold text-green-color'>Contact us</p>
         <p className='text-lg text-text-color'>House #A16E0E1, Group #4, Tumnorp Village, Songkat Phnom Penh Thmey, Khan Sen Sok, Phnom Penh, Cambodia</p>
-        <form className='flex flex-col gap-4' ref={form} onSubmit={handleSendEmail} action="">
-          <Input name='from_name' size='lg' classNames={{
-            inputWrapper: inputStyle
-          }} variant='flat' placeholder='First name' type='text' />
-          <Input name='subject' size='lg' variant='flat' placeholder='Subject' type='text' classNames={{
-            inputWrapper: inputStyle
-          }} />
-          <Input name='email' size='lg' variant='flat' placeholder='Your Email' type='email' classNames={{
-            inputWrapper: inputStyle
-          }} />
-          <Textarea name='message' size='lg' variant='flat' placeholder='Message ...' classNames={{
-            inputWrapper: 'rounded-xl bg-gray-200 px-5 shadow-md bg-white'
-          }} />
-          <Link href={QRCODE} target='_blank' className='hover:underline underline-offset-4'>Or <span className='text-blue-color font-semibold'>QRCODE</span></Link>
-          <Button spinner={
-            <svg
-              className="animate-spin h-5 w-5 text-current"
-              fill="none"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <circle
-                className="opacity-25"
-                cx="12"
-                cy="12"
-                r="10"
-                stroke="currentColor"
-                strokeWidth="4"
-              />
-              <path
-                className="opacity-75"
-                d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"
-                fill="currentColor"
-              />
-            </svg>
-          } isLoading={loading} type='submit' className='rounded-full text-lg text-white bg-green-color flex justify-center items-center gap-5' size='lg'>Send Message <IoMdSend /> </Button>
-        </form>
+        <div className='text-lg'>
+          <h3 className='text-green-color font-medium'>Mr. Bush Pal</h3>
+          <div className='grid gap-2'>
+            <p className='flex gap-3 justify-start items-center'><MdAttachEmail size={30} className='text-gray-600' /> <a href="mailto:general@gal-corp.com">general@gal-corp.com</a></p>
+            <p className='flex gap-3 justify-start items-center'><MdMarkEmailRead size={30} className='text-gray-600' /> <a href="mailto:operations@gal-corp.com">operations@gal-corp.com</a></p>
+            <p className='flex gap-3 justify-start items-center'><MdEmail size={30} className='text-gray-600' />Back-up Email: <a href="mailto: veasnabush@gmail.com"> veasnabush@gmail.com</a></p>
+          </div>
+        </div>
+        <ButtonGreen classname='mt-5' content='Email to operations@gal-corp.com' size='md' url='mailto:operations@gal-corp.com' showIcon={false} />
       </div>
     </section>
   )

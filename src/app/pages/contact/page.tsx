@@ -6,7 +6,7 @@ import contactusImage from '@public/assets/images/Mention-amico.png';
 export default function ContactUsPage() {
   return (
     <section id='contact-us-page'>
-      <ContactUs image={contactusImage}  />
+      <ContactUs image={contactusImage} imageClassname='md:w-2/3 w-full m-auto'  />
     </section>
   )
 }
