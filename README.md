@@ -1,8 +1,11 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
+
+```bash
+  git clone https://github.com/SeangLeng/galcorp.git
+  npm install --save
+```
 
 ```bash
 npm run dev
@@ -13,3 +16,8 @@ pnpm dev
 # or
 bun dev
 ```
+
+### Galcorp Website
+
+Website: https://www.gal-corp.com/
+or https://gal-corp.com/
