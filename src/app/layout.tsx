@@ -11,6 +11,7 @@ import Loading from "./loading";
 export const metadata: Metadata = {
   title: "Galcorp-logistic",
   description: "Gal is the ideal international freight forwarder to suit your freight and logistics needs. ",
+  
 };
 
 export default function RootLayout({
