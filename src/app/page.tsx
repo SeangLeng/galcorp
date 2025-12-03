@@ -21,7 +21,7 @@ export default function App() {
       <h1 className="font-bold text-text-color lg:w-4/5 md:w-5/6 w-full leading-tight">Welcome to <span className="text-red-color">Gal</span> <span className="text-green-color">Logistic</span> International Freight Forwarder </h1>
       <section className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5">
         <div className="mt-5">
-          <div id="description" className="text-lg text-text-color mt-10">
+          <div id="description" className="text-lg text-text-color lg:mt-10">
             <TextGenerateEffectDemo text="Gal is the ideal international freight forwarder to suit your freight and logistics needs. We have local knowledge and plus international market experiences since year 2000, now more than a decade of commitment to serve our clients." />
           </div>
           <Link href={COMPANYPROFILE} className="flex gap-3 hover:text-red-color text-blue-color font-medium text-lg hover:gap-5 transition-all justify-start items-center mt-5">More about Gal <IoMdArrowForward /></Link>
