@@ -14,36 +14,15 @@ import ContactUs from "@/components/contactUs/ContactUs";
 import truck from "@public/assets/images/3d-truck-removebg-preview.png";
 import { TextGenerateEffectDemo } from "@/components/typingSmooth/TextGenerateEffect";
 import { ABOUT, COMPANYPROFILE, SERVICES } from "@/utils/Routes";
-import CountUpNumber from "@/components/countUp/CountUp";
 
 export default function App() {
   return (
     <main>
-      <h1 className="font-bold text-text-color lg:w-4/5 md:w-5/6 w-full">Welcome to <span className="text-red-color">Gal</span> <span className="text-green-color">Logistic</span> International Freight Forwarder </h1>
+      <h1 className="font-bold text-text-color lg:w-4/5 md:w-5/6 w-full leading-tight">Welcome to <span className="text-red-color">Gal</span> <span className="text-green-color">Logistic</span> International Freight Forwarder </h1>
       <section className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-5">
         <div className="mt-5">
-          <div id="description" className="text-lg text-text-color">
+          <div id="description" className="text-lg text-text-color mt-10">
             <TextGenerateEffectDemo text="Gal is the ideal international freight forwarder to suit your freight and logistics needs. We have local knowledge and plus international market experiences since year 2000, now more than a decade of commitment to serve our clients." />
-          </div>
-          <div className="lg:w-3/4 md:w-full w-full grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 justify-start items-center gap-8 mt-10">
-            <div className="hover:ring-2 rounded-2xl flex cursor-pointer justify-center items-center gap-5 p-3 transition-all shadow-md">
-              <GoContainer size={40} color="#598C6E" />
-              <div>
-                <p className="text-4xl font-bold text-green-color">
-                  <CountUpNumber number={1500} />+
-                </p>
-                <p className="font-medium">Shipment per year</p>
-              </div>
-            </div>
-            <div className="hover:ring-2 hover:ring-blue-color rounded-2xl cursor-pointer flex justify-center items-center gap-5 p-3 transition-all shadow-md">
-              <FaUserFriends size={40} color="#2E88CA" />
-              <div>
-                <p className="text-4xl font-bold text-blue-color">
-                  <CountUpNumber number={1000} />+
-                </p>
-                <p className="font-medium">Costumers</p>
-              </div>
-            </div>
           </div>
           <Link href={COMPANYPROFILE} className="flex gap-3 hover:text-red-color text-blue-color font-medium text-lg hover:gap-5 transition-all justify-start items-center mt-5">More about Gal <IoMdArrowForward /></Link>
         </div>
